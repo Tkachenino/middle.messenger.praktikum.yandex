@@ -1,0 +1,75 @@
+body {
+  position: relative;
+}
+
+.auth {
+  position: absolute;
+  width: 340px;
+  height: 450px;
+  left: 50%;
+  top: 135px;
+  transform: translateX(-50%);
+  background: #ffffff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+  border-radius: 12px;
+  padding: 50px 30px 30px;
+}
+.auth--header {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  /* identical to box height, or 100% */
+  text-align: center;
+  color: #1e1e1e;
+}
+.auth--formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.input-wrapper .label {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9px;
+  line-height: 9px;
+  /* identical to box height, or 100% */
+  color: #999999;
+}
+.input-wrapper .input {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #3369f3;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+  /* identical to box height, or 100% */
+  padding: 7px;
+  color: #1e1e1e;
+}
+.input-wrapper .input:focus {
+  border-bottom: 1px solid #042169;
+}
+
+.button {
+  width: 100%;
+  background: #3369f3;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 37px;
+}
