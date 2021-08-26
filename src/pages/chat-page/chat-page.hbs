@@ -1,58 +1,260 @@
-<section class='chat' style="display: flex;">
-  <section class='chat-sidebar' style="width: 30%;">
+<section class='chat' style='display: flex;'>
+  <section class='chat-sidebar' style='width: 30%;'>
     <div class='control-panel'>
-      <button>к профилю</button>
-      <input type="search" />
+      <button class='control-panel--button-profile'>к профилю
+        <span class='material-icons'>keyboard_arrow_right</span></button>
+      <input type='search' placeholder='Поиск ...' />
     </div>
-      <ul class='chat-list'>
-        <li class='chat-item'>
-            <img class="chat-item--image" src="https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff" />
-            <div  class="chat-item--info-wrapper" >
-              <h3>Андрей</h3>
-              <p>Текс сообщения</p>
-            </div>
-            <div  class="chat-item--data-wrapper" >
-              <span>10:49</span>
-              <span>19</span>
-            </div>
-        </li>
-          <li class='chat-item'>
-            <img class="chat-item--image" src="https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff" />
-            <div  class="chat-item--info-wrapper" >
-              <h3>Андрей</h3>
-              <p>Текс сообщения</p>
-            </div>
-            <div  class="chat-item--data-wrapper" >
-              <span>10:49</span>
-              <span>19</span>
-            </div>
-        </li>
-          <li class='chat-item'>
-            <img class="chat-item--image" src="https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff" />
-            <div  class="chat-item--info-wrapper" >
-              <h3>Андрей</h3>
-              <p>Текс сообщения</p>
-            </div>
-            <div  class="chat-item--data-wrapper" >
-              <span>10:49</span>
-              <span>19</span>
-            </div>
-        </li>
-      </ul>
+    <ul class='chat-list'>
+   {{#each chats}}
+     {{> preview  }} 
+ {{/each}}
+       
+      {{! <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li>
+      <li class='chat-item'>
+        <img
+          class='chat-item--image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <div class='chat-item--info-wrapper'>
+          <h3 class='name'>Андрей</h3>
+          <p class='text'>Текс сообщения</p>
+        </div>
+        <div class='chat-item--data-wrapper'>
+          <span class='time'>10:49</span>
+          <span class='count'>19</span>
+        </div>
+      </li> }}
+    </ul>
   </section>
-  <section class='chat-main' style="width: 70%;">
-    <header  class='header'>
+  <section class='chat-main'>
+    <header class='header'>
       <div class='header--info-wrapper'>
-        <img class="image" src="https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff" />
-        <h3 class="name">Андрей</h3>
+        <img
+          class='image'
+          src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+        />
+        <h3 class='name'>Андрей</h3>
       </div>
-      <button>дополнительные действия</button>
+      <button class='header--button' type='submit'>
+        <span class='material-icons'>format_list_bulleted</span>
+
+      </button>
     </header>
-    <div class="messsage-area">
-      <div>
-        <h3>Вчера</h3>
-        <div>
-          <p>
+    <div class='messsage-area'>
+      <div class='date-section'>
+        <h3 class='date-section--time'>Вчера</h3>
+        <div class='message'>
+          <p class='message--text'>
             Привет! Смотри, тут всплыл интересный кусок лунной космической
             истории — НАСА в какой-то момент попросила Хассельблад адаптировать
             модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты
@@ -63,18 +265,23 @@
             и не попали. Всего их было произведено 25 штук, одну из них недавно
             продали на аукционе за 45000 евро.
           </p>
-          <span>10:23</span>
+          <span class='message--date'>10:23</span>
         </div>
-        <div>
-          <p>Круто !!!</p>
-          <span>12:23</span>
+        <div class='message own'>
+          <p class='message--text'>Круто !!!</p>
+          <span class='message--date'>12:23</span>
         </div>
       </div>
     </div>
-    <form class="message-form">
-      <button type="button">Прикрепить фото</button>
-      <input type="text" />
-      <button type="submit">Отправить</button>
+    <form class='message-form'>
+      <button class='message-form--button' type='button'>
+        <span class='material-icons'>file_present</span>
+      </button>
+      <input class='message-form--input' type='text' />
+      <button class='message-form--button' type='submit'>
+        <span class='material-icons'>send</span>
+
+      </button>
     </form>
   </section>
 </section>
