@@ -3,48 +3,42 @@
     <span class='material-icons'>chevron_left</span>
   </button>
   <section class='profile--content'>
+    <form class="shadow">
+      <input type='file' name='avatar'/>
+    </form>
     <img
       class='avatar'
       src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
     />
-    <p class='username'>Bdf</p>
+    <p class='username'>Иван</p>
 
-    <ul class='user-info--list'>
-      <li class='user-info--item'>
-        <span class='label'>Почта</span>
-        <span class='value'>pochta@yandex.ru</span>
-      </li>
-      <li class='user-info--item'>
-        <span class='label'>Логин</span>
-        <span class='value'>ivanivanov</span>
-      </li>
-      <li class='user-info--item'>
-        <span class='label'>Имя</span>
-        <span class='value'>Иван</span>
-      </li>
-      <li class='user-info--item'>
-        <span class='label'>Фамилия</span>
-        <span class='value'>Иванов</span>
-      </li>
-      <li class='user-info--item'>
-        <span class='label'>Имя в чате</span>
-        <span class='value'>Иван</span>
-      </li>
-      <li class='user-info--item'>
-        <span class='label'>Телефон</span>
-        <span class='value'>+7 (909) 967 30 30</span>
-      </li>
+    <ul class='user-info--list profile-data'>
+      {{#each profile_settings}}
+        {{> info }}
+      {{/each}}
     </ul>
+
+    <form class="profile-form--data shadow">
+      {{#each profile_settings}}
+      {{> input }}
+      {{/each}}
+    </form>
+
+    <form class="profile-form--password shadow">
+      {{#each password_settings}}
+      {{> input }}
+      {{/each}}
+    </form>
 
     <ul class='user-info--list actions'>
       <li class='user-info--item'>
-        <span class='label actions'>Изменить данные</span>
+        {{> link indefication='change-info' type='button' text='Изменить данные'}}
       </li>
       <li class='user-info--item'>
-        <span class='label actions'>Изменить пароль</span>
+        {{> link indefication='change-password' type='button' text='Изменить пароль'}}
       </li>
-      <li class='user-info--item'>
-        <span class='label actions exit'>Выйти</span>
+      <li class='user-info--item danger'>
+        {{> link indefication='logout' type='button' text='Выйти'}}
       </li>
     </ul>
   </section>

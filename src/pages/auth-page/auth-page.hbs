@@ -1,26 +1,11 @@
 <form class='auth'>
   <h1 class='auth--header'>Вход</h1>
   <div class='auth--formWrapper'>
-    <div class='input-wrapper'>
-
-      <label class='label' for='login'>Логин</label>
-      <input class='input' id='login' name='login' placeholder='login' />
-    </div>
-
-    <div class='input-wrapper'>
-      <label class='label' for='password'>Пароль</label>
-      <input
-        class='input'
-        id='password'
-        name='password'
-        placeholder='password'
-      />
-    </div>
+    {{> input name='login' label='Логин' value='' }}
+    {{> input name='password' label='Пароль'value='' }}
   </div>
-
   <div class='auth--button-wrapper'>
-    <button class='button' type='submit'>Авторизоваться</button>
-    <button class='link' type='button'>Нет аккаутна?</button>
-
+  {{> button indefication='auth' type='submit' text='Вход' }}
+  {{> link indefication='registerLink' type='button' text='Нет аккаутна?' }}
   </div>
 </form>

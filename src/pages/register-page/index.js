@@ -1,4 +1,4 @@
-import { chat, auth } from '../../index';
+import { auth } from '../../index';
 
 export class Register {
   constructor({ template }) {
@@ -11,13 +11,7 @@ export class Register {
   }
 
   afterRender() {
-    const chatLink = document.querySelector('.link');
     const authLink = document.querySelector('.button');
-
-    chatLink.addEventListener('click', () => {
-      chat.render();
-    });
-
     authLink.addEventListener('click', () => {
       auth.render();
     });

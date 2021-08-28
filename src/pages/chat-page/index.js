@@ -1,8 +1,3 @@
-// import { Profile } from '../profile-page';
-// import profilePageTemplate from '../profile-page/profile-page.hbs';
-// const profilePage = profilePageTemplate();
-// const profile = new Profile({ template: profilePage });
-
 import { profile } from '../../index';
 
 export class Chat {
