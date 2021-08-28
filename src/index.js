@@ -45,12 +45,12 @@ export const server_error_page = new Page500({ template: page500 });
 export const not_found_page = new Page404({ template: page404 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  // let random = Math.random();
-  // if (random < 0.2) {
-  // server_error_page.render();
-  // } else if (random > 0.8) {
-  // not_found_page.render();
-  // } else {
-  chat.render();
-  // }
+  let random = Math.random();
+  if (random < 0.2) {
+    server_error_page.render();
+  } else if (random > 0.8) {
+    not_found_page.render();
+  } else {
+    chat.render();
+  }
 });
