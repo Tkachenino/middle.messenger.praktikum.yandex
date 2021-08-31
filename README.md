@@ -10,15 +10,15 @@ Express
 
 Проект служит учебным материалом для написание SPA приложения без использования клиенских библиотек.
 
+## Ссылка на проект в Netify
+
+https://jolly-cori-8a76e3.netlify.app/
+
 ## Ссылка на merge sprint_1
 
 https://github.com/Tkachenino/middle.messenger.praktikum.yandex/pull/1
 
 ## Ссылка на проект в Netify
-
-https://jolly-cori-8a76e3.netlify.app/
-
-## Установка
 
 Проект поддерживает несколько команд для запуска несколько режимов разработки.
 

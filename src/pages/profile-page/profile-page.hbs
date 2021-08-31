@@ -1,0 +1,45 @@
+<main class='profile'>
+  <button class='profile--nav'>
+    <span class='material-icons'>chevron_left</span>
+  </button>
+  <section class='profile--content'>
+    <form class="shadow">
+      <input type='file' name='avatar'/>
+    </form>
+    <img
+      class='avatar'
+      src='https://images.unsplash.com/profile-1589352637695-cd91ccd020f0image?dpr=2&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff'
+    />
+    <p class='username'>Иван</p>
+
+    <ul class='user-info--list profile-data'>
+      {{#each profile_settings}}
+        {{> info }}
+      {{/each}}
+    </ul>
+
+    <form class="profile-form--data shadow">
+      {{#each profile_settings}}
+      {{> input }}
+      {{/each}}
+    </form>
+
+    <form class="profile-form--password shadow">
+      {{#each password_settings}}
+      {{> input }}
+      {{/each}}
+    </form>
+
+    <ul class='user-info--list actions'>
+      <li class='user-info--item'>
+        {{> link indefication='change-info' type='button' text='Изменить данные'}}
+      </li>
+      <li class='user-info--item'>
+        {{> link indefication='change-password' type='button' text='Изменить пароль'}}
+      </li>
+      <li class='user-info--item danger'>
+        {{> link indefication='logout' type='button' text='Выйти'}}
+      </li>
+    </ul>
+  </section>
+</main>

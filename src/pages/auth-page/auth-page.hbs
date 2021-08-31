@@ -1,0 +1,11 @@
+<form class='auth'>
+  <h1 class='auth--header'>Вход</h1>
+  <div class='auth--formWrapper'>
+    {{> input name='login' label='Логин' value='' }}
+    {{> input name='password' label='Пароль'value='' }}
+  </div>
+  <div class='auth--button-wrapper'>
+  {{> button indefication='auth' type='submit' text='Вход' }}
+  {{> link indefication='registerLink' type='button' text='Нет аккаутна?' }}
+  </div>
+</form>

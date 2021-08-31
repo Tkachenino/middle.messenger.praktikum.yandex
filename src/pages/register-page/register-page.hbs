@@ -1,0 +1,14 @@
+<form class="auth">
+  <h1 class="auth--header">Регистрация</h1>
+  <div class="auth--formWrapper">
+    {{> input name='first_name' label='Имя'}}
+    {{> input name='second_name' label='Фамилия'}}
+    {{> input name='login' label='Логин'}}
+    {{> input name='email' label='Почта'}}
+    {{> input name='password' label='Пароль'}}
+    {{> input name='phone' label='Номер телефона'}}
+  </div>
+  <div class="auth--button-wrapper">
+    {{> button register='enter' type='submit' text='Зарегистрироваться'}}
+  </div>
+</form>
