@@ -1,6 +1,14 @@
 import { chat, register } from '../../index';
 
-export class Auth {
+interface IPage {
+  template: string;
+  render(): void;
+  afterRender(): void;
+}
+
+export class Auth implements IPage {
+  template: string;
+
   constructor({ template }) {
     this.template = template;
   }

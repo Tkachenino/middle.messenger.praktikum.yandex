@@ -1,6 +1,8 @@
 import { auth } from '../../index';
 
 export class Register {
+  template: string;
+
   constructor({ template }) {
     this.template = template;
   }

@@ -1,6 +1,8 @@
 import { chat, auth } from '../../index';
 
 export class Profile {
+  template: string;
+
   constructor({ template }) {
     this.template = template;
   }

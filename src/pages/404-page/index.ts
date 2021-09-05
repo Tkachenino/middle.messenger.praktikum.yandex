@@ -1,6 +1,8 @@
 import { chat } from '../../index';
 
 export class Page404 {
+  template: string;
+
   constructor({ template }) {
     this.template = template;
   }

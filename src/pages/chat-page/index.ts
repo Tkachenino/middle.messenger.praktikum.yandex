@@ -1,6 +1,8 @@
 import { profile } from '../../index';
 
 export class Chat {
+  template: string;
+
   constructor({ template }) {
     this.template = template;
   }

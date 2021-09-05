@@ -1,6 +1,8 @@
 import { chat } from '../../index';
 
 export class Page500 {
+  template: string;
+
   constructor({ template }) {
     this.template = template;
   }

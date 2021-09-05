@@ -1,18 +1,18 @@
-import './components/input';
-import './components/button';
-import './components/link';
-import './components/preview';
-import './components/message';
-import './components/info-item';
+import 'components/input';
+import 'components/button';
+import 'components/link';
+import 'components/preview';
+import 'components/message';
+import 'components/info-item';
 
 import { data } from './mock/data';
 
-import authPageTemplate from './pages/auth-page/auth-page.hbs';
-import registerPageTemplate from './pages/register-page/register-page.hbs';
-import chatPageTemplate from './pages/chat-page/chat-page.hbs';
-import profilePageTemplate from './pages/profile-page/profile-page.hbs';
-import Page500Template from './pages/500-page/index.hbs';
-import Page404Template from './pages/404-page/index.hbs';
+import authPageTemplate from 'pages/auth-page/auth-page.hbs';
+import registerPageTemplate from 'pages/register-page/register-page.hbs';
+import chatPageTemplate from 'pages/chat-page/chat-page.hbs';
+import profilePageTemplate from 'pages/profile-page/profile-page.hbs';
+import Page500Template from 'pages/500-page/index.hbs';
+import Page404Template from 'pages/404-page/index.hbs';
 
 import { Chat } from './pages/chat-page';
 import { Profile } from './pages/profile-page';
